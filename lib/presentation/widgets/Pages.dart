@@ -8,8 +8,6 @@ class Pages extends StatefulWidget{
   State<Pages> createState() => _PageView();
 }
 
-// TODO : recuarda al final de provar medir argumentos de las demas case de screens
-
 class _PageView extends State<Pages>
     with TickerProviderStateMixin {
       late PageController _pageController;
@@ -32,7 +30,6 @@ class _PageView extends State<Pages>
 
       @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     final TextTheme textTheme = Theme.of(context).textTheme;
 
     return Stack(
@@ -160,6 +157,6 @@ class PageIndicator extends StatelessWidget {
           ),
         ],
       ),
-      );
+    );
   }
 }

@@ -1,4 +1,4 @@
-import 'package:app_mobile/presentation/widgets/Pages.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,13 +10,15 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
       return MaterialApp(
-        title:  'App scouting',
+        title: 'App scouting',
+
         theme: ThemeData(
           primaryColor: Color.fromARGB(3, 1, 19, 111)
         ),
+
         home: Scaffold(
           appBar: AppBar(title: const Text('App scouting'),),
-          body: Pages(),
+          
         ),
         
     );
