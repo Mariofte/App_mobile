@@ -1,4 +1,5 @@
 
+import 'package:app_mobile/presentation/widgets/List_Tile_Select.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,10 +17,7 @@ class App extends StatelessWidget {
           primaryColor: Color.fromARGB(3, 1, 19, 111)
         ),
 
-        home: Scaffold(
-          appBar: AppBar(title: const Text('App scouting'),),
-          
-        ),
+        home: List_Tile_Select()
         
     );
   }
