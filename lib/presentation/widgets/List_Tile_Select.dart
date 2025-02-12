@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 
 class List_Tile_Select  extends StatefulWidget {
-  const List_Tile_Select({super.key});
+  const List_Tile_Select({
+    super.key,
+    required this.FTC,
+    required this.FRC,
+    required this.Horarios,
+  });
+
+  final dynamic FTC;
+  final dynamic FRC;
 
   @override
   State<List_Tile_Select> createState() => List_Tile_Select_State();
@@ -13,6 +21,7 @@ class List_Tile_Select_State extends State<List_Tile_Select> {
   late List<bool> _selected;
   bool _selectAll = false;
   bool _isGridMode = false;
+  
 
 
   @override
@@ -35,7 +44,7 @@ class List_Tile_Select_State extends State<List_Tile_Select> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ListTile selection'),
+        title: const Text('App scouthing'),
         leading: isSelectiononMode
             ? IconButton(
               icon: const Icon(Icons.close),
@@ -71,11 +80,11 @@ class List_Tile_Select_State extends State<List_Tile_Select> {
                 child: !_selectAll
                     ? const Text(
                       'select all',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                     )
                     : const Text(
                       'unselect all',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                     ),
                 onPressed: () {
                   _selectAll = !_selectAll;
@@ -83,11 +92,14 @@ class List_Tile_Select_State extends State<List_Tile_Select> {
                     _selected = 
                     List<bool>.generate(listLength, (_) => _selectAll);
                   });
-                },
-              )
+                },)
           ],
       ),
-      
+      body: _isGridMode
+          ? widget.FRC 
+          : widget.FTC
+          
     );
+  
   }
 }

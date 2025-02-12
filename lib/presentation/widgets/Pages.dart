@@ -2,7 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 
 class Pages extends StatefulWidget{
-  const Pages({super.key});
+  const Pages({
+    super.key,
+    required this.Matches,
+    required this.Pits,
+    });
+
+    final dynamic Matches;
+    final dynamic Pits;
+
+
 
   @override
   State<Pages> createState() => _PageView();
@@ -13,7 +22,9 @@ class _PageView extends State<Pages>
       late PageController _pageController;
       late TabController _tabController;
       int _currentPageIndex = 0;
-
+      
+      
+      
       @override
       void initState() {
         super.initState();
@@ -30,7 +41,7 @@ class _PageView extends State<Pages>
 
       @override
   Widget build(BuildContext context) {
-    final TextTheme textTheme = Theme.of(context).textTheme;
+    //final TextTheme textTheme = Theme.of(context).textTheme;
 
     return Stack(
       alignment: Alignment.bottomCenter,
@@ -39,15 +50,8 @@ class _PageView extends State<Pages>
           controller: _pageController,
           onPageChanged: _handlePageViewChanged,
           children: <Widget>[
-            Center(
-              child: Text('First Page', style: textTheme.titleLarge),
-            ),
-            Center(
-              child: Text('Second Page', style: textTheme.titleLarge),
-            ),
-            Center(
-              child: Text('Third Page', style: textTheme.titleLarge),
-            )
+            widget.Matches,
+            widget.Pits,
           ],
         ),
         PageIndicator(
