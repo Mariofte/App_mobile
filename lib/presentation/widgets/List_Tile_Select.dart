@@ -5,7 +5,6 @@ class List_Tile_Select  extends StatefulWidget {
     super.key,
     required this.FTC,
     required this.FRC,
-    required this.Horarios,
   });
 
   final dynamic FTC;
