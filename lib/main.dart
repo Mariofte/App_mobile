@@ -22,14 +22,17 @@ class App extends StatelessWidget {
         ),
 
         home: List_Tile_Select(
+
           FTC : Pages(
-            Matches: app_ftc_Matches(), 
+            Matches: app_ftc_matches(),
             Pits: app_ftc_pits()
             ),
+
           FRC : Pages(
             Matches: app_frc_matches(),
             Pits: app_frc_pits()
             )
+            
         ),
 
     );

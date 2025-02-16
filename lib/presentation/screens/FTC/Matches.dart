@@ -1,14 +1,39 @@
 import 'package:flutter/material.dart';
 
-class app_ftc_Matches extends StatelessWidget {
-  const app_ftc_Matches({super.key});
+class app_ftc_matches extends StatefulWidget {
+  const app_ftc_matches({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return Text(
-      overflow: TextOverflow.fade,
-      maxLines: 1,
-      'App Matches FTC'
-    );
-  }
+  State<app_ftc_matches> createState() =>  _app_ftc_matches();
 }
+
+class _app_ftc_matches extends State<app_ftc_matches> {
+  @override
+  Widget build(BuildContext context) {
+  return PageView(
+    children: <Widget>[
+
+      Text('Registro'),
+      // TODO : ¿Iniciales del scouter?
+      const TextField(
+        decoration: InputDecoration(labelText: '¿Iniciales del scouter?',filled: true),
+      ),
+
+      // TODO : ¿Tipo de match?
+      const TextField(
+        decoration: InputDecoration(labelText: '¿Tipo de match?',filled: true),
+      ),
+
+      //TODO : ¿Número de match?
+      const TextField(
+        decoration: InputDecoration(labelText: '¿Número de match?',filled: true),
+      ),
+
+      Text('Match'),
+      Text('Autonomo'),
+      Text('TeleOp'),
+      Text('End Game'),
+      Text('Preguntas'),
+
+    ],);
+  }}

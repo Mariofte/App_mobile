@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
 
-class app_ftc_pits extends StatelessWidget {
+class app_ftc_pits extends StatefulWidget {
   const app_ftc_pits({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return Text(
-      overflow: TextOverflow.fade,
-      maxLines: 1,
-      'App Pits FTC'
-    );
-  }
+  State<app_ftc_pits> createState() => _app_frc_pits();
 }
+
+class _app_frc_pits extends State<app_ftc_pits> {
+  @override
+  Widget build(BuildContext context) {
+    return PageView(
+      children: <Widget>[
+
+        Text('Registro'),
+
+        Text('Robot'),
+        Text('Preguntas')
+
+
+    ],);
+  }}
